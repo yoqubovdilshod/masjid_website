@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="bg-color2" style="background-image: url({% static 'images/photo5.jpg' %}); ">
+    <div class="bg-center" style="color: #fff;">
+
+        {% if user.is_authenticated %}
+            <h2 style="color: blue;">Hurmatli {{ user.username }}! Hush kelibsiz!!!</h2> >>><a href="{% url 'logout' %}">Chiqish</a><<<
+
+        {% else %}
+            <h2><strong>Saytga kirmagansiz!!!</strong></h2>
+            <a href="{% url 'login' %}">Kirish</a> |
+            <a href="{% url 'signup' %}">Ro'yxatdan o'tish</a>
+        {% endif %}
+
+        <div class="bg-center">
+            <div class="bg-center2">
+                <h2 class="header">
+                    <strong>Marhamat tumanidagi "Sulaymon Sirli" jome masjidi...</strong>
+                </h2>
+                <p style="color: blue; background-color: coral; opacity: 0.6;"><strong>Bu masjidni ko'pchilik insonlar tanimaslig ehtimoli yuqori...Bunga birqancha sabablar bor.1-sababi bo'lishi mumkin bu masjidnig joylashuvi biroz chetroqdagili.
+                Yani bu masjid Durafshon(eski nomi Shukurmergan)MFY ning Qirg'isizton=O'zbekiston chegaralariga yaqin joyda joylashganligi.2-sababi bo'lishi mumkin
+                bu masjid oraliq davrlarda juda ko'p ayrim sabablarga ko'ra o'z ish faoliyatini to'xtatgan(yopilgan).3-sababi bo'lishi mumkin bu masjid joylashgan
+                hududning yon atrofdagi insonlarning diniy ilimdan juda ham uzoqdaligi.Bu atrofdagi insonlar Islom dini bo'yicha tushunchalarga ega emasligi...
+                Bu masjidning "Sulaymon Sirli" deb nomlashining sababi birqancha... Sabablardan biri shuki o'sha davrda Sulaymon degan bir iymom bo'lgan ekan.
+                Shu iymom o'sha masjidda o'z faoliyatini yurg'izgan. El uchun musulmon xalqi uchun qilgan mehnatlari uchun shu imomning ismalari bilan nomlana
+                boshlagan ekan aytishlariga qaraganda...</strong></p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="bg-color2" style="background-image: url({% static 'images/photo3.jpg' %}); ">
+    <div class="bg-center">
+        <div class="bg-center2"  style="color: #fff; ">
+           <h2 class="header" >
+               <strong style="color: #fff; background-color: blue; opacity: 0.7;">Masjidning keyingi asrlardagi faoliyati...</strong>
+           </h2>
+            <p style="color: #fff; background-color: blue; opacity: 0.5;"><strong>Bir necha yillardan so'ng, turli hil gap so'zlardan keyin masjidimiz o'z faoliyatini yurgizib kelmoqda.
+            Bu masjidning ko'rinishiga kelsak, ko'rinishini fon suratlari orqali ko'rib turibsiz... Allohga shukurlar bo'lsinki
+            hozirgi paytda juda ko'p o'zgarishlar bo'lmoqda. Isitish tizimlari, hojatxona qulayliklari, yozda sovutish tizimlari, qishda
+            isitish tizimlari, turli hil tashqi ko'rinishdagi o'zgarishlari va shu kabilar... Eng quvonarlisi shuki Azon aytishlik yo'lga
+            qo'yilganligidir...</strong><br><br>
+
+            <div class="link">
+              <h2><a  style="color: red;" href="{% url 'article_new' %}">Yangi xabar yozish</a> | <a  style="color: red;" href="{% url 'article_list' %}">Barcha xabarlarni ko'rish</a></h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="bg-color-footer">
+    <div class="bg-center">
+        <div class="center-footer">
+            <strong class="strong">
+                <h2>Biz bilan bog'laning, quyidagi manzillar:</h2>
+                <ul>
+                    <li>Telegram:  <a href="https://t.me/Yoqubov_0414"> @Yoqubov_0414</a></li>
+                    <li>Telefon:  <a href="#">+998 93 418 04 14</a></li>
+                    <li>Email:  <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGllCcMfxRNsbkmSvHmbMWNwzDv"> weppythondev@gmail.com</a></li>
+                </ul>
+            </strong>
+        </div>
+    </div>
+</div>
+
+<div class="bg-color-foter">
+    <div class="bg-center">
+        <h6>Sulaymon Sirli - Jome Masjid &copy; 2021</h6>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}
